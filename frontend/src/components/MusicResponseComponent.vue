@@ -6,8 +6,8 @@
                 <h5 class="card-title">{{ responseData.result.title }}</h5>
                 <p class="card-text">{{ responseData.result.artist }}</p>
                 <div>
-                    <a :href="responseData.result.spotify.external_urls.spotify" target="_blank" class="btn btn-dark">Escuchar en Spotify</a>
-                    <span class="material-symbols-outlined refresh" @click.native="resetState">refresh</span>
+                    
+                    <a :href="responseData.result.spotify.external_urls.spotify" target="_blank" class="btn btn-dark">Escuchar en Spotify </a>
                 </div>
                
                 
@@ -23,12 +23,18 @@
                 <h5 class="card-title">{{ responseData.result.title }}</h5>
                 <p class="card-text">{{ responseData.result.artist }}</p>
                 <a :href="responseData.result.apple_music.url" target="_blank" class="btn btn-dark">Escuchar en Apple Music</a>
-               
             </div>
             <div class="card-footer">
                 <small class="text-muted">{{ responseData.result.timecode }}</small>
             </div>
         </div>
+    </div>
+    <div class="refresh" @click="resetState">
+<span>Recargar</span>
+
+        <span class="material-symbols-outlined">
+cached
+</span>
     </div>
 </template>
 
@@ -64,7 +70,7 @@ export default {
 .refresh {
     font-size: 2rem;
     margin-left: 40px;
-    margin-top: 20px;
+    margin-top: 30px;
     cursor: pointer;
 }
 .music-cards-container {

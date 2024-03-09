@@ -94,7 +94,7 @@ export default {
                 return;
             }
 
-            let selectedOption = this.spotifysearch && this.applesearch ? "both" : this.spotifysearch ? "spotify" : "apple_music";
+            let selectedOption = this.spotifysearch && this.applesearch ? ["spotify","apple_music"] : this.spotifysearch ? "spotify" : "apple_music";
 
             let formData = new FormData();
             formData.append('token', this.token);
