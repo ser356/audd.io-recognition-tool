@@ -20,7 +20,7 @@ def post_from_frontend(file, return_options, token):
         "return": return_options,
     }
     result = requests.post("https://api.audd.io/", files=files, data=data)
-    
+    #print(result.json())
     return result.json()
 
 @app.route("/", methods=["GET"])
